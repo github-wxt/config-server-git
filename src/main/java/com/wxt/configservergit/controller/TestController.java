@@ -9,4 +9,8 @@ package com.wxt.configservergit.controller;
  * @since 1.0.0
  */
 public class TestController {
+
+    public static void main(String[] args) {
+        System.out.println("测试提交内容");
+    }
 }
