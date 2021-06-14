@@ -1,0 +1,29 @@
+
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/github-wxt/config-server-git
+          username: 675632387@qq.com
+          password: wt675632387
+      label: master
+
+
+server:
+  port: 1201
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8001/eureka/
+    register-with-eureka: true
+    fetch-registry: true
+  #心跳检测
+  instance:
+    #客户端向服务端发送心跳间隔时间
+    lease-renewal-interval-in-seconds: 1
+    #eureka收到最后一次心跳后等待时间，超过改时间则会被server剔除
+    lease-expiration-duration-in-seconds: 2
